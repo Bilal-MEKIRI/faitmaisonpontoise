@@ -1,5 +1,11 @@
+import "@styles/home.scss";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <div className="mt">Home Page</div>
+    </>
+  );
 };
 
 export default Home;
