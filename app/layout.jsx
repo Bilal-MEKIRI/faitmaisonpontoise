@@ -1,6 +1,7 @@
-import "@styles/globals.scss";
-import "@styles/layout.scss";
-import Nav from "@components/Nav";
+import "../styles/globals.scss";
+import "../styles/layout.scss";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import Head from "next/head";
 
 export const metaData = {
@@ -20,6 +21,7 @@ const layout = ({ children }) => {
         <main className="layout">
           <Nav />
           <div>{children}</div>
+          <Footer />
         </main>
       </body>
     </html>

@@ -1,7 +1,8 @@
+@import './mixins';
+@import './variables';
+
 .layout{
   max-width: 1800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f7f7f7;
+  @include flex-column-center;
+  background-color: $background-color;
 }

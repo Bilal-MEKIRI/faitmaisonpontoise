@@ -1,5 +1,80 @@
-.mt{
-  margin-top: 100px;
-  background-color: lightcoral;
-  height: 1800px;
+@import './mixins';
+@import './variables';
+
+.section-container{
+  padding: 50px 0;
+  margin: 120px auto;
+  @include flex-column-center;
+
+  .section-title{
+    font-family: $font-family;
+    font-size: 3.1rem;
+    font-weight: 700;
+    color: $text-color;
+    line-height: 1.5;
+    padding-bottom: 30px;
+    text-align: center;
+
+    span{
+      color: $accent-color;
+    }
+  }
+
+  .section{
+    width: 85%;
+    @include flex-center-between;
+    flex-wrap: wrap;
+  }
 }
+
+
+
+
+@media(max-width: 990px){
+  .section{
+    width: 90%;
+  }
+}
+
+@media(max-width: 712px) {
+  .section-container{
+    .section{
+      width: 95%;
+    }
+  }
+}
+
+@media(max-width: 665px){
+  .section{
+    @include flex-column-center;
+  }
+
+  @media(max-width: 455px){
+    .section-title{
+      font-size: 2.8rem;
+    }
+  }
+}
+
+@media(max-width: 455px){
+  .section-container{
+    .section-title{
+      width: 80%;
+      font-size: 2.6rem;
+      text-align: left;
+    }
+  }
+}
+
+@media(max-width: 283px){
+  .section-container{
+    .section-title{
+      font-size: 2rem;
+    }
+  }
+}
+
+
+
+
+
