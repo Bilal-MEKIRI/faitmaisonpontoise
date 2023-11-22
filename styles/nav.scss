@@ -1,57 +1,67 @@
+@import './mixins';
+@import './variables';
 
 .header{
   width: 100%;
   height: fit-content;
-  background-color: white;
-  margin-right: auto;
-  margin-left: auto;
-
+  background-color: $white-background;
+  margin: 0 auto;
+  padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 10;
-
-  padding-top: 20px;
-  padding-bottom: 20px;
-
   display: flex;
   align-items: center;
-  
-  -webkit-box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.23); 
   box-shadow: 0px -4px 19px 3px rgba(86, 86, 86, 0.23);
 
 
-
   .header-content-container{
-    background-color: white;
+    background-color: $white-background;
     height: 100%;
+
     width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: 0 auto;
+    @include flex-center-between;
 
 
     .logo{
-      width: 200px
+      @include flex-center-between;
+      width: fit-content;
+      text-decoration: none;
+
+      &:hover{
+        cursor: pointer;
+      }
+      .logo-icon{
+        width: 30px;
+        height: 30px;
+        color: $accent-color;
+      }
+
+      .logo-text{
+        font-family: $font-family;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #666666f1;
+        margin-left: 10px;
+      }
     }
+
 
     .navigation{
       width: 20%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @include flex-center-between;
 
       .nav-item{
         list-style: none;
         .link{
           text-decoration: none;
-          color: #666;
+          color: $text-color;
           font-size: 1.2rem;
-          font-family: 'Nunito', sans-serif;
+          font-family: $font-family;
           transition: all ease-in-out 0.2s;
           &:hover{
-            color: #ff3838;
+            color: $accent-color;
           }
         }
       }
@@ -61,12 +71,13 @@
       display: none;
       width: fit-content;
       height: fit-content;
+      z-index: 30;
 
       .burger-menu{
         height: 35px;
         width: 35px;
-        color: #666;
-  
+        color: $text-color;
+        
         &:hover{
           cursor: pointer;
         }
@@ -80,8 +91,6 @@
     .header-content-container{
       width: 90%;
       
-
-  
       .navigation{
         width: 25%;
       }
@@ -89,18 +98,14 @@
   }
 
   @media (max-width: 885px) {
-    .header-content-container{
-      .navigation{
-        width: 30%;
-      }
+    .header-content-container .navigation {
+      width: 30%;
     }
   }
 
   @media (max-width: 800px) {
     .header-content-container{
       
-
-  
       .navigation{
         display: none;
       }
@@ -110,7 +115,5 @@
       }
     }
   }
-
-
 }
 

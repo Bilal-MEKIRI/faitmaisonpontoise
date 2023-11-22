@@ -1,0 +1,41 @@
+@import './mixins';
+@import './variables';
+
+.footer{
+  width: 100%;
+  @include flex-column-center;
+  justify-content: space-between;
+  background-color: $footer-background-color;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  .content-container{
+    width: 80%;
+    height: fit-content;
+    margin: 0 auto;
+    @include flex-column-center;
+    justify-content: space-between;
+
+
+    .copyright{
+      color: white;
+      font-size: 1.2rem;
+      font-family: $font-family;
+      width: fit-content;
+      line-height: 1.4;
+      padding-top: 30px;
+  
+      .name{
+        color: $accent-color;
+      }
+    }
+  }
+
+
+  @media(max-width: 520px) {
+    .content-container .copyright{
+      font-size: 1rem;
+    }
+  }
+
+}
