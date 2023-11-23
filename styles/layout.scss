@@ -1,6 +1,10 @@
 @import './mixins';
 @import './variables';
 
+html{
+  scroll-behavior: smooth;
+}
+
 .layout{
   max-width: 1800px;
   @include flex-column-center;

@@ -31,7 +31,7 @@ const Nav = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link href="/" className="link">
+            <Link href="/#hamburger-section" className="link">
               Menu
             </Link>
           </li>

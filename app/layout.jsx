@@ -2,6 +2,7 @@ import "../styles/globals.scss";
 import "../styles/layout.scss";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import Promo from "../components/Promo";
 import Head from "next/head";
 
 export const metaData = {
@@ -19,6 +20,7 @@ const layout = ({ children }) => {
           <meta name="description" content={metaData.description} />
         </Head>
         <main className="layout">
+          <Promo />
           <Nav />
           <div>{children}</div>
           <Footer />
