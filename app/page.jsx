@@ -1,5 +1,6 @@
 import "../styles/home.scss";
 import "../styles/hero.scss";
+import "../styles/contact.scss";
 
 import Card from "../components/Card";
 import Button from "../components/Button";
@@ -23,7 +24,7 @@ const Home = () => {
         />
       </section>
 
-      <div className="section-container">
+      <div className="section-container" id="hamburger-section">
         <h2 className="section-title">
           Nos <span>Hamburgers</span>
         </h2>

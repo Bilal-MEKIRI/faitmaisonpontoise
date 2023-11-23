@@ -1,0 +1,31 @@
+@import './mixins';
+@import './variables';
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(125%);
+  }
+}
+
+
+.promo{
+  width: 100%;
+  height: fit-content;
+  background-color: #ff383860;
+  @include flex-center-between;
+  overflow: hidden;
+
+  .text{
+    width: 80%;
+    padding: 5px 0;
+    font-family: $font-family;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2f2f2f;
+    margin: 0;
+    animation: moveLeftToRight 17s linear infinite;
+  }
+}
