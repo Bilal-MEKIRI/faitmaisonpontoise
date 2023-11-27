@@ -1,23 +1,17 @@
 import "../styles/card.scss";
 
-import Image from "next/image";
 import Button from "../components/Button";
 
-const Card = () => {
+const Card = ({ price, img, name, description, className }) => {
   return (
-    <div className="card">
+    <div className={`card ${className}`}>
       <div className="img-price-container">
-        <div className="price">10€</div>
-        <img
-          src="/assets/images/hamburger 1.jpg"
-          className="menu-img"
-          width={20}
-          height={20}
-        />
+        <div className="price">{price}</div>
+        <img src={img} className="menu-img" width={20} height={20} />
       </div>
       <div className="description">
-        <span className="menu-name">CHEESE BURGER</span>
-        (1 steak, cheddar) + frites et boisson 33cl
+        <span className="menu-name">{name}</span>
+        {description}
       </div>
       <Button url="/contact" content="Commander" blank="" />
     </div>

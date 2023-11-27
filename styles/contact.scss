@@ -14,6 +14,14 @@
     align-items: flex-start;
     font-family: $font-family;
 
+    .section-container{
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    
+
     .sub-title{
       font-size: 1.7rem;
       margin-bottom: 35px;
@@ -22,7 +30,7 @@
     }
   
     .contact-info{
-      width: 40%;
+      width: 50%;
 
 
       .info-container{
@@ -84,18 +92,27 @@
       }
     }
   
-    .title{
-      font-size: 2.5rem;
-      line-height: 1.5;
-      font-weight: 700;
-      color: $text-color;
-      margin-bottom: 30px;
-
-      span{
-        color: $accent-color;
-      }
+    .delivery-info{
+      width: 40%;
+      font-size: 1.6rem;
+      color: $description-color;
     }
-  
+
+    
+  }
+
+  .title{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: 30px;
+
+    span{
+      color: $accent-color;
+    }
+  }
+    
     .map-container{
       width: 50%;
       height: 100%;
@@ -110,7 +127,8 @@
 
       }
     }
-  }
+  
+}
 
   @media (max-width: 1300px) {
     .contact-container{
@@ -151,7 +169,13 @@
       width: 800px;
 
       .contact-info{
-        width: 60%;
+        width: 65% !important;
+      }
+
+      .delivery-info{
+        width: 30% !important;
+        font-size: 1.4rem !important;
+        line-height: 1.5 !important;
       }
 
       .map-container{
@@ -159,6 +183,7 @@
       }
     }
   }
+
 
   @media (max-width: 850px) {
     .contact-container{
@@ -187,6 +212,31 @@
     }
   }
 
+
+  @media (max-width: 703px) {
+
+    .section-container{
+
+      flex-direction: column !important;
+      align-items: flex-start !important;
+
+      .contact-info{
+        width: 80% !important;
+        order: 2;
+      }
+
+      .delivery-info{
+        width: 100% !important;
+        margin-bottom: 70px;
+        font-size: 1.6rem !important;
+        color: $text-color !important;
+      }
+    }
+
+    }
+  
+
+
   @media (max-width: 700px) {
     .contact-container{
       width: 600px;
@@ -198,7 +248,7 @@
       width: 550px;
 
       .contact-info{
-        width: 80%;
+        width: 85%;
       }
 
       .map-container{
@@ -207,26 +257,14 @@
     }
   }
 
-  @media (max-width: 600px) {
-    .contact-container{
-      width: 500px;
 
-      .contact-info{
-        width: 85%;
-      }
-
-      .map-container{
-        width: 85%;
-      }
-    }
-  }
 
   @media (max-width: 550px) {
     .contact-container{
       width: 450px;
 
       .contact-info{
-        width: 90%;
+        width: 95% !important;
       }
 
       .map-container{
@@ -240,7 +278,7 @@
       width: 400px;
 
       .contact-info{
-        width: 100%;
+        width: 100% !important;
 
         .info-container{
           .opening-hours{
@@ -273,17 +311,31 @@
   @media (max-width: 400px) {
     .contact-container{
       width: 350px;
+
+      .contact-info{
+        width: 95% !important;
+      }
+
+      .map-container{
+        width: 98% !important;
+      }
     }
   }
 
   @media (max-width: 350px) {
     .contact-container{
-      width: 320px;
+      width: 300px;
+
+
+
+      .contact-info{
+        width: 100% !important;
+      }
 
       .info-container{
         .opening-hours{
           .day-hour-container{
-            justify-content: space-between;
+            justify-content: space-between !important;
             
             .day{
               width: 40%;
@@ -299,14 +351,15 @@
 
       .map-container{
         margin-top: 50px;
+        width: 100%;
       }
       
     }
   }
   
-  @media (max-width: 300px) {
+  @media (max-width: 324px) {
     .contact-container{
-      width: 200px;
+      width: 95% !important;
     }
   }
 
