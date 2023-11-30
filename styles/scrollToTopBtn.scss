@@ -1,0 +1,19 @@
+@import './variables';
+
+.scroll-to-top-btn{
+  width: 35px;
+  height: 35px;
+  padding: 8px;
+  border-radius: 6px;
+  position: fixed;
+  top: 85%;
+  right: 2%;
+  color: $background-color;
+  background-color: $accent-color;
+  transition: all 0.2s ease-in-out;
+
+  &:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
