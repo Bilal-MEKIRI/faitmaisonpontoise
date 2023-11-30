@@ -1,12 +1,14 @@
 import "../../styles/contact.scss";
 
+import ScrollToTopBtn from "../../components/ScrollToTopBtn";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
   return (
     <div className="contact-container">
-      <section className="section-container">
+      <section className="contact-section-container">
         <div className="contact-info">
           <h1 className="title">
             Nous <span>Contacter</span>
@@ -52,9 +54,9 @@ const Contact = () => {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.469797926254!2d2.0915803761401683!3d49.05870398658938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6f5a9618d7fd1%3A0xa21bb1e7bd1f6073!2sFait%20Maison!5e0!3m2!1sen!2sfr!4v1700766790264!5m2!1sen!2sfr"
           className="map"
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
+      <ScrollToTopBtn />
     </div>
   );
 };

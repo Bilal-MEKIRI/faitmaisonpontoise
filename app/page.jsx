@@ -10,6 +10,7 @@ import { URL } from "../utils/urls.js";
 
 import Card from "../components/Card";
 import Button from "../components/Button";
+import ScrollToTopBtn from "../components/ScrollToTopBtn";
 
 const Home = () => {
   const [burgers, setBurgers] = useState([]);
@@ -248,6 +249,7 @@ const Home = () => {
           })}
         </div>
       </div>
+      <ScrollToTopBtn />
     </>
   );
 };
