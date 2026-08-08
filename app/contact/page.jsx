@@ -43,7 +43,8 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="delivery-info">Livraison à partir de 20€</div>
+        {/* <div className="delivery-info">Livraison à partir de 20€</div> */}
+        <div className="delivery-info">Fermé pour congés du 21 juillet au 25 août inclus</div>
       </section>
 
       <div className="map-container">
